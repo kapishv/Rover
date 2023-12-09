@@ -1,0 +1,125 @@
+\documentclass{article}
+\usepackage{forest}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{multicol}
+
+\begin{document}
+\textcolor{red}{The images are at the last page, reference is given wherever required.}
+\section{Introduction}
+A cutting-edge self-driven rover is designed for exploration and data collection on M-sand. This report encompasses the test cases.
+
+\section{Execution Operations}
+
+After every pass ('everypass' is defined as a movement of the rover in the direction of its view and is determined by the movement it makes in any manner), the rover's brain will pass through the given structure and decide its next move.
+
+\begin{center}
+\begin{forest}
+for tree={
+    grow'=0,
+    parent anchor=east,
+    child anchor=west,
+    edge={->},
+    l sep+=2em,
+}
+[Node 0 (What it has to do)
+    [Node 01 (Evade)
+        [Node 011 (Cube 30cmx30cm)]
+        [Node 012 (Hemisphere 40cm)]
+    ]
+    [Node 02 (Pass)
+        [Node 021 (Cube 15cmx15cm)]
+        [Node 022 (Hemisphere 20cm)]
+    ]
+    [Node 03 (Pick)
+        [Node 031 (Object Pick)]
+        [Node 052]
+    ]
+    [Node 04 (Place)
+        [Node 041 (Object Place in container)]
+        [Node 053]
+    ]
+    [Node 05 (Not Moving)
+        [Node 051 (Emergency Response)]
+        [Node 052 (Pickup operation)]
+        [Node 053 (Place operation)]
+    ]
+]
+\end{forest}
+\end{center}
+
+1)  The rover is run through the environment containing the M-sand,
+
+\vspace{2mm}
+\textbf{Detecting Block and Crater}\\
+Using the sensor to identify two types of blocks and Craters (A, B) employing trigonometry and other suitable methods to determine their size and categorize them.
+
+\begin{itemize}
+    \item \textbf{Pass}: Confirming successful identification and categorization.
+    \item \textbf{Evade}: Navigating around identified object.
+\end{itemize}
+
+\textbf{Detecting Pick and Place}\\
+Using the sensor to identify cylinder, employing trigonometry and other suitable methods to determine the size and give final assurance.
+
+\begin{itemize}
+    \item \textbf{Pick}: If this is true, pick it.
+    \item \textbf{Place}: Place it.
+\end{itemize}
+
+2) Repeat the Node 0, after everypass.
+
+\vspace{2mm}
+During Walkthrough, the camera will act as a depth sensor, and will do the local mapping and send final result for doing next thing.
+
+\newpage
+
+\subsection{Walkthrough}
+During every pass, the local map to move will be determined by the gradient of movement, \textcolor{red}{gradient movement} on the map \textcolor{red}{Map mapping estimation}. When the gradient is changing for every small distance by a fixed amount, the place is good to go, and the probability of going there is safe will be determined. If not the Node 03, and 04 will run.
+
+\subsection{Pick and Place}
+The camera will act as a depth sensor and select the cylinder by sensing the curved edges. There are three types of things to sense: hemisphere (crater), cube (obstacle), and cylinder (pick-and-place).
+
+Node 3: The camera placed on the rover will effectively calculate the shape and dimension of the object to pick and adjust the maximum distance of the separation between hands by 1.1d for the object to get picked. The minimum close range is 0.9d for it not to get damaged. The hand will pick the object from the curved edges and place its hand between them for the torque to act less, and with less force, it'll get picked. Here, d is the diameter of the object to be picked (it can be hard-encoded into the machinery as well).
+
+\subsection{Stop}
+After placing the object in the desired location, stop moving, this will also check if optimal location is reached, ie: the final destination.
+\newpage
+
+\begin{figure}
+    \centering
+        \includegraphics[width=0.7\linewidth]{cyllinder.jpg}
+        \caption{Cylinder detection}
+\end{figure}
+
+
+\begin{figure}
+    \centering
+        \includegraphics[width=0.7\linewidth]{cube.png}
+        \caption{cube detection}
+\end{figure}
+
+
+\begin{figure}
+    \centering
+        \includegraphics[width=0.7\linewidth]{depth-cyllinder.jpg}
+        \caption{Cylinder detection}
+\end{figure}
+
+
+\begin{figure}
+    \centering
+        \includegraphics[width=0.7\linewidth]{z-depth_map.jpeg}
+        \caption{Map mapping estimation}
+\end{figure}
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.7\linewidth]{Screenshot (222).png}
+    \caption{gradient movement}
+    \label{fig:enter-label}
+\end{figure}
+
+
+\end{document}
