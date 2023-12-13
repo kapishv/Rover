@@ -1,0 +1,42 @@
+## Hardware Identification
+
+**Table 1: Hardware Requirements**
+
+| No. | Hardware Details | Subsystem | Category | Quantity Needed | Justification for Chosen Type |
+|---|---|---|---|---|---|
+| 1 | Raspberry Pi 4 Model B | Central Processing Unit | Microcontroller | 1 | Powerful processor with sufficient RAM and GPIO pins for controlling various sensors and actuators. |
+| 2 | IMU (Inertial Measurement Unit) | Sensor | IMU | 1 | Provides essential data on the robot's orientation and movement in 3D space. |
+| 3 | LiDAR Sensor | Sensor | LiDAR | 1 | High-resolution 3D mapping capabilities for obstacle detection and environment navigation. |
+| 4 | Camera | Sensor | Camera | 1 | Enables visual perception for object recognition and path planning. |
+| 5 | 12 V Motor with Encoder | Roving Mechanism | DC Motor | 6 | Efficient locomotion of the robot with encoders for precise control. |
+| 6 | Heavy Servo Motor | Roving Mechanism | Servo Motor | 4 | Efficient turning of the rover with high torque servo motors |
+| 7 | Servo Motor | Manipulator | Servo Motor | 2 | 2-DOF robotic arm with precise control |
+| 8 | Nvidia Xavier NX | Central Processing Unit | GPU | 1 | Fast image processing for computer vision tasks |
+| 9 | Radio Transmitter and Receiver | Communication | Radio | 1 | Communication between the rover and ground station. |
+| 10 | Battery Pack | Power Supply | Li-ion Battery Pack | 2 | High power density and long-lasting operation. |
+| 11 | Battery Management System (BMS) | Power Supply | BMS | 1 | Monitors and protects the battery pack, ensuring safe and efficient operation. |
+| 12 | Battery Charger | Power Supply | Battery Charger | 1 | Safe and efficient charging of the battery pack. |
+| 13 | Mechanical Frame Parts | Frame | Structural Components | 1 | Provides a sturdy and stable platform for mounting all components. |
+
+## Updated Bill of Materials (BoM)
+
+| Item Name | Price (INR) |
+|---|---|
+| Raspberry Pi 4 Model B | 7,500 |
+| IMU Sensor | 7,000 |
+| LiDAR Sensor | 30,000 |
+| Camera | 11,000 |
+| 12V Motor with Encoder (x6) | 4,000 (each) |
+| Heavy Servo Motor (x4) | 3,000 (each) |
+| Servo Motor (x2) | 2,000 (each) |
+| Nvidia Xavier NX | 50,000 |
+| Radio Transmitter and Receiver | 5,000 |
+| Battery Pack (x2) | 10,000 (each) |
+| Battery Management System | 5,000 |
+| Battery Charger | 3,000 |
+| Mechanical Frame Parts | 20,000 |
+
+**Total**: ~160,000 INR
+
+**Note:** The estimated BoM is subject to change based on the specific model and brand of hardware chosen.
+This hardware selection represents a preliminary assessment and may be subject to modifications based on further analysis and testing. The team will continue to evaluate and refine the hardware selection as the project progresses.
