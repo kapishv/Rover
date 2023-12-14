@@ -1,0 +1,20 @@
+## Hardware and Software Realization Plan
+
+**Table 2: Hardware Realization Plan**
+
+| No. | Hardware Details | Procurement Source | Specifications/ Realization Plan | Quantity | Estimated Cost |
+|---|---|---|---|---|---|
+| 1 | Raspberry Pi 4 Model B | Market | - Pre-assembled unit purchased from authorized distributors. - Customized software image pre-installed for robot control. | 1 | 7,500 |
+| 2 | IMU Sensor | Market | - Pre-selected model based on accuracy, size, and power consumption. - Integration with Raspberry Pi through I2C or SPI interface. - Calibration software developed to ensure accuracy. | 1 | 7,000 |
+| 3 | LiDAR Sensor | Market | - Pre-selected model based on range, resolution, and field of view. - Integration with Raspberry Pi through ROS or dedicated libraries. - Point cloud processing algorithms developed for obstacle detection and environment mapping. | 1 | 30,000 |
+| 4 | Camera | Market | - Pre-selected model based on resolution, frame rate, and low-light performance. - Integration with Raspberry Pi through CSI interface. - Image processing algorithms developed for object recognition and path planning. | 1 | 11,000 |
+| 5 | 12 V Motor with Encoder (x6) | Market | - Pre-selected model based on torque, speed, and efficiency. - Procurement from reputable vendors with quality assurance. - Integration with motor drivers and encoders for precise control. | 6 | 4,000 (each) |
+| 6 | Heavy Servo Motor (x4) | Market | - Pre-selected model based on torque and rotation angle. - Procurement from reputable vendors with quality assurance. - Integration with servo controllers for precise control of rover turning. | 4 | 3,000 (each) |
+| 7 | Servo Motor (x2) | Market | - Pre-selected model based on torque and rotation angle. - Procurement from reputable vendors with quality assurance. - Integration with servo controllers for robotic arm movement. | 2 | 2,000 (each) |
+| 8 | Nvidia Xavier NX | Market | - Pre-installed on carrier board for Raspberry Pi. - Customized software image pre-installed for GPU-accelerated tasks. | 1 | 50,000 |
+| 9 | Radio Transmitter and Receiver | Market | - Pre-selected model based on communication range and frequency. - Integration with radio modules for ground station communication. - Secure communication protocols implemented for data exchange. | 1 | 5,000 |
+| 10 | Battery Pack (x2) | Market | - Pre-selected model based on capacity, voltage, and discharge rate. - Procurement from reputable vendors with safety certifications. - Battery Management System (BMS) integrated for monitoring and protection. | 2 | 10,000 (each) |
+| 11 | Battery Management System (BMS) | Market | - Pre-selected model based on compatibility with battery pack and communication protocols. - Integration with battery pack for monitoring cell voltage, current, and temperature. - Safety features implemented to prevent overcharging and over-discharging. | 1 | 5,000 |
+| 12 | Battery Charger | Market | - Pre-selected model based on battery capacity and charging rate. - Integration with BMS for safe and efficient charging. - Charging protocols implemented to optimize battery lifespan. | 1 | 3,000 |
+| 13 | Mechanical Frame Parts | 3D Printing and Fabrication | - CAD model designed for structural integrity and component mounting. - 3D printed parts for non-critical components. - Aluminum or steel fabrication for high-stress components. - Assembly and integration of all frame parts. | 1 | 20,000 |
+
