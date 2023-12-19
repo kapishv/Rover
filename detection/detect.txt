@@ -1,0 +1,11 @@
+`semantic segmentation` for detection objects of same time, pixel gradient.
+(In general the pathway) -> in this way the slope will also be covered and
+there won't be an instance where the rover does not move on the slope thinking
+that it is an object to avoid.
+
+
+`instance segmentation` of detecting the objects (hemisphere, cube, cyllinder).
+
+Note: This can be done, after or before depth image mapping, if the processor can not hold the depth then shift to simple segmentation
+Here, without depth mapping may be a little less accurate.
+
